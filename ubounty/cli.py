@@ -6,6 +6,7 @@ import click
 from rich.console import Console
 
 from ubounty import __version__
+from ubounty.browse import browse
 from ubounty.wallet import wallet_group
 
 
@@ -21,6 +22,9 @@ def main():
 
 # Register wallet commands
 main.add_command(wallet_group)
+
+# Register browse command
+main.add_command(browse)
 
 
 if __name__ == "__main__":
